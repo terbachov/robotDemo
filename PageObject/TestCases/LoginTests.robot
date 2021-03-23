@@ -13,7 +13,22 @@ ${pwdF}    admin123
 
 
 *** Test Cases ***
-LoginTestPass
+LoginTestPass1
+    Open my Browser    ${SiteUrl}    ${Browser}
+    Sleep    1    
+    Enter UserName    ${user}
+    Sleep    1    
+    Enter Password    ${pwd}
+    Sleep    1    
+    Click SignIn
+    Sleep    1    
+    Verify Login Success
+    
+    Close my Browser
+
+
+LoginTestPass2
+    Log    a new test
     Open my Browser    ${SiteUrl}    ${Browser}
     Sleep    1    
     Enter UserName    ${user}
@@ -26,6 +41,8 @@ LoginTestPass
     
     Close my Browser
     
+
+   
 LoginTestFail
     Open my Browser    ${SiteUrl}    ${Browser}
     Sleep    1    
